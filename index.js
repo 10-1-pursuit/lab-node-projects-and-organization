@@ -31,3 +31,8 @@ function wordsWithQ() {
 function findWordsWithLetter(x) {
   return words.filter((word) => word.includes(x));
 }
+
+function findWordWithLetterInTerminal(){
+return findWordsWithLetter(process.argv[2])
+}
+
