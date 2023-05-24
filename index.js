@@ -36,11 +36,17 @@ function firstXWords(words, index){
     }
 }
 
-firstXWords(wordsData, 3);
 /**logs from x to y words.
  * @param {string[]} words
+ * @param {number} firstIndex - starting index
+ * @param {number} lastIndex - ending index
 */
-function subsetOfWords(words, firstIndex, lastIndex){}
+function subsetOfWords(words, firstIndex, lastIndex){
+    for(let i = firstIndex; i <= lastIndex; i++){
+        console.log(words[i]);
+    }
+}
+subsetOfWords(wordsData, 2, 5);
 
 /**logs all the words, sorted alphabetically.
  * @param {string[]} words
