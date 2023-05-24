@@ -25,13 +25,18 @@ function nextTenWords(words, index){
         console.log(words[i]);
     }
 }
-nextTenWords(wordsData, 1)
 
 /**logs from 0 to x words.
  * @param {string[]} words
+ * @param {number} index - ending position of the array
 */
-function firstXWords(words, index){}
+function firstXWords(words, index){
+    for(let i = 0; i <= index; i++){
+        console.log(words[i]);
+    }
+}
 
+firstXWords(wordsData, 3);
 /**logs from x to y words.
  * @param {string[]} words
 */
