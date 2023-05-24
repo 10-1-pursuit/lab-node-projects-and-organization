@@ -57,3 +57,21 @@ function subsetOfWords(words, firstPos, secondPos) {
 		console.log(words[firstPos]);
 	}
 }
+
+/**
+ * Logs all the words, sorted alphabetically.
+ * @param {string[]} words - an array of strings.
+ */
+
+function sortWords(words) {
+	const sortedWords = words.sort((a, b) => {
+		if (a.toLowerCase() < b.toLowerCase()) {
+			return -1;
+		}
+		if (a.toLowerCase() > b.toLowerCase()) {
+			return 1;
+		}
+		return 0;
+	});
+	console.log(sortedWords);
+}
