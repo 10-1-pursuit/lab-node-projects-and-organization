@@ -9,11 +9,11 @@ This lab requires you to create a new node project, import the data from `words.
 ## Getting started
 
 1. Fork and clone this repository.
-1. Navigate to the cloned repository's directory on your command line.
-1. Turn this project into a Node.js project by running `npm init -y`.
-1. Open up the repository in VSCode.
-1. Create an `index.js` file.
-1. Import `words.json` into `index.js` and confirm that it has been imported into your file by logging the value.
+2. Navigate to the cloned repository's directory on your command line.
+3. Turn this project into a Node.js project by running `npm init -y`.
+4. Open up the repository in VSCode.
+5. Create an `index.js` file.
+6. Import `words.json` into `index.js` and confirm that it has been imported into your file by logging the value.
 
 ## Instructions
 
