@@ -44,3 +44,16 @@ function firstXWords(words, num) {
 		console.log(words[i]);
 	}
 }
+
+/**
+ * Logs from x to y words.
+ * @param {string[]} words - an array of strings.
+ * @param {number} firstPos - number that represents the starting index in the array.
+ * @param {number} secondPos - number that represents the ending index in the array.
+ */
+
+function subsetOfWords(words, firstPos, secondPos) {
+	for (firstPos; firstPos < secondPos; firstPos++) {
+		console.log(words[firstPos]);
+	}
+}
