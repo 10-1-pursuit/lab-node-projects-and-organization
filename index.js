@@ -33,6 +33,7 @@ function findWordsWithLetter(x) {
 }
 
 function findWordWithLetterInTerminal(){
-return findWordsWithLetter(process.argv[2])
+console.log( findWordsWithLetter(process.argv[2]))
 }
 
+findWordWithLetterInTerminal()
