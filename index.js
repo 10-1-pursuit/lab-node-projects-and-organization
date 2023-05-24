@@ -32,3 +32,15 @@ function nextTenWords(words) {
 		console.log(words[i]);
 	}
 }
+
+/**
+ * Logs from 0 to x words.
+ * @param {string[]} words - an array of strings.
+ * @param {number} num - number that represents how many words to log from the 0th index.
+ */
+
+function firstXWords(words, num) {
+	for (let i = 0; i < num; i++) {
+		console.log(words[i]);
+	}
+}
