@@ -46,9 +46,12 @@ function subsetOfWords(words, firstIndex, lastIndex){
         console.log(words[i]);
     }
 }
-subsetOfWords(wordsData, 2, 5);
 
 /**logs all the words, sorted alphabetically.
  * @param {string[]} words
 */
-function sortWords(words){}
+function sortWords(words){
+    sorted = [...words];
+    console.log(sorted.sort());
+}
+sortWords(wordsData)
