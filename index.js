@@ -66,4 +66,15 @@ function wordsWithQ(words){
     return qWords.filter(word => word.includes("q"))
 }
 
-console.log(wordsWithQ(wordsData))
+/** findWordsWithLetter()
+ * takes an argument `letter` and returns all the words with that matching letter
+ * 
+ * @param {string[]} words - array of lowercase words
+ * @param {string} letter - string of a single alphabetical character
+ * @returns {string[]} - words that contain the given the letter
+ */
+function findWordsWithLetter(words, letter){
+    const wordsWithLetter = [...words]
+    return wordsWithLetter.filter(word => word.includes(letter.toLowerCase()))
+}
+console.log(findWordsWithLetter(wordsData, "z"))
