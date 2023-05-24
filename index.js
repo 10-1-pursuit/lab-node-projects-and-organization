@@ -21,3 +21,14 @@ function firstTenWords(words) {
 		console.log(words[i]);
 	}
 }
+
+/**
+ * Logs the next ten words.
+ * @param {string[]} words - an array of strings.
+ */
+
+function nextTenWords(words) {
+	for (let i = 10; i < 20; i++) {
+		console.log(words[i]);
+	}
+}
