@@ -6,12 +6,16 @@ const wordsData = require("./words.json");
 function allWords(words){
     console.log(words);
 }
-allWords(wordsData);
 
 /**logs the first ten words.
  * @param {string[]} words
 */
-function firstTenWords(words){}
+function firstTenWords(words){
+    for(let i = 0; i < 10; i++){
+        console.log(words[i])
+    }
+}
+firstTenWords(wordsData);
 
 /**logs the next 10 words.
  * @param {string[]} words
