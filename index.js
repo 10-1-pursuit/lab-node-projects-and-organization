@@ -15,12 +15,17 @@ function firstTenWords(words){
         console.log(words[i])
     }
 }
-firstTenWords(wordsData);
 
 /**logs the next 10 words.
  * @param {string[]} words
+ * @param {number} index - starting position in the array
 */
-function nextTenWords(words, index){}
+function nextTenWords(words, index){
+    for(let i = index; i < index + 10; i++){
+        console.log(words[i]);
+    }
+}
+nextTenWords(wordsData, 1)
 
 /**logs from 0 to x words.
  * @param {string[]} words
