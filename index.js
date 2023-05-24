@@ -54,4 +54,16 @@ function sortWords(words){
     sorted = [...words];
     console.log(sorted.sort());
 }
-sortWords(wordsData)
+
+/** wordsWithQ()
+ *  returns all the words that contain the letter q
+ * 
+ * @param {string[]} words - array of lowercase words
+ * @returns {string[]} - words that contain the letter 'q'
+ */
+function wordsWithQ(words){
+    const qWords = [...words]
+    return qWords.filter(word => word.includes("q"))
+}
+
+console.log(wordsWithQ(wordsData))
