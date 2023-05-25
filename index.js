@@ -75,3 +75,22 @@ function sortWords(words) {
 	});
 	console.log(sortedWords);
 }
+
+// 2. Begin building the `wordle` solver functions -
+/* 
+The `wordle` solver requires two functions:
+  - one that returns a list of words that has matching letters in any position.
+  - one that returns a list of words that has matching letters that also match the position.
+*/
+// Start with simpler versions -
+
+/**
+ * Returns all the words that contain the letter `q`.
+ * @param {string[]} words - an array of strings.
+ * @returns {string[]} An array of strings that all contain the letter `q`.
+ */
+
+function wordsWithQ(words) {
+	const qWords = words.filter((word) => word.includes('q'));
+	return qWords;
+}
