@@ -5,7 +5,7 @@ const wordsJson = require("./words.json");
  * -----------------------
  * Showing all the words in the data.
  * 
- * @param {string[]} words - A dataset for words, deafult value is JSON file, [wordsJson] 
+ * @param {string[]} words - a dataset for words, deafult value is JSON file, [wordsJson] 
  */
 function allWords(words = wordsJson){
     for(let word of words){
@@ -19,7 +19,7 @@ function allWords(words = wordsJson){
  * showing first ten words (from index 0 to 9)
  * if the size of [words] less than 10, return -1 w/ error log.
  * 
- * @param {string[]} words - A data set for words, default value is JSON file, [wordsJson]
+ * @param {string[]} words - a data set for words, default value is JSON file, [wordsJson]
  */
 function firstTenWords(words = wordsJson){
     /** validation for size of the data */
@@ -38,7 +38,7 @@ function firstTenWords(words = wordsJson){
  * ------------------------
  * showing 10 words which begin w/ index [position]
  * 
- * @param {string[]} words - A data set for words, default value is JSON file, [wordsJson]
+ * @param {string[]} words - a data set for words, default value is JSON file, [wordsJson]
  * @param {number} position - a start position
  */
 function nextTenWords(words = wordsJson, position = 0){
@@ -57,7 +57,7 @@ function nextTenWords(words = wordsJson, position = 0){
  * ------------------------
  * showing words from index 0 to index [end]
  * 
- * @param {string[]} words - A dataset for words, deafult value is JSON file, [wordsJson] 
+ * @param {string[]} words - a dataset for words, deafult value is JSON file, [wordsJson] 
  * @param {number} end - an end position for words
  */
 function firstXWords(words = wordsJson, end = words.length){
@@ -75,7 +75,7 @@ function firstXWords(words = wordsJson, end = words.length){
  * ------------------------
  * showing words from index [start] to index [end]
  * 
- * @param {string[]} words - A dataset for words, deafult value is JSON file, [wordsJson] 
+ * @param {string[]} words - a dataset for words, deafult value is JSON file, [wordsJson] 
  * @param {number} start - the initial position for words 
  * @param {*} end - the end position for words
  */
@@ -101,7 +101,7 @@ function subsetOfWords(words = wordsJson, start = 0, end = words.length){
  * -------------------------
  * showing all the words w/ alphabettical order
  * 
- * @param {string[]} words - A dataset for words, deafult value is JSON file, [wordsJson] 
+ * @param {string[]} words - a dataset for words, deafult value is JSON file, [wordsJson] 
  */
 function sortWords(words = wordsJson){
     console.log(words.sort());
@@ -112,7 +112,7 @@ function sortWords(words = wordsJson){
  * --------------------------
  * return words that contains "q"
  * 
- * @param {string[]} words - A dataset for words, deafult value is JSON file, [wordsJson] 
+ * @param {string[]} words - a dataset for words, deafult value is JSON file, [wordsJson] 
  * @returns {string[]} - filtering words that contain "q"
  */
 function wordsWithQ(words = wordsJson){
@@ -124,8 +124,8 @@ function wordsWithQ(words = wordsJson){
  * ----------------------------
  * return words that contain a character [letter]
  * 
- * @param {string[]} words - A dataset for words, deafult value is JSON file, [wordsJson] 
- * @param {string} letter - A character to filter in 
+ * @param {string[]} words - a dataset for words, deafult value is JSON file, [wordsJson] 
+ * @param {string} letter - a character to filter in 
  * @returns {string[]} - a filtered array of strings
  */
 function findWordsWithLetter(words = wordsJson, letter){
@@ -137,13 +137,19 @@ function findWordsWithLetter(words = wordsJson, letter){
  * -----------------------------
  * return any words that contain [letters] in any order
  * 
- * @param {string[]} words - A dataset for words, deafult value is JSON file, [wordsJson] 
- * @param {string} letters - A string, up to 5 letters, to filter in [words] 
+ * @param {string[]} words - a dataset for words, deafult value is JSON file, [wordsJson] 
+ * @param {string} letters - a string, up to 5 letters, to filter in [words] 
  * @returns {string[]} - a filtered array of strings
  */
 function lettersMatch(words = wordsJson, letters){
+    if(letters.length > 5){
+        console.log("letters must contain up to 5 letters.");
+        return -1;
+    }
+
     let temp = words;
     letters = letters.split('');
+
     for(let index = 0; index < letters.length; index++){
         if(letters[index] != "." || letters[index] != "_"){
             temp = findWordsWithLetter(temp, letters[index]);
@@ -153,11 +159,36 @@ function lettersMatch(words = wordsJson, letters){
     return temp;
 }
 
-function main(){
-    console.log("HELLO");
-}
+/**
+ * lettersExactMatch()
+ * --------------------------
+ * filtering in the words that contain [letters] with exact same order.
+ * [letters] should be up to 5 characters long, else it will return -1
+ * 
+ * @param {string[]} words - a dataset for words, deafult value is JSON file, [wordsJson] 
+ * @param {string} letters - a string, up to 5 characters long 
+ * @returns {string[]} - an array w/ filtered words.
+ */
+function lettersExactMatch(words = wordsJson, letters){
+    /** validation */
+    if(letters.length > 5){
+        console.log("letters must contain up to 5 letters.");
+        return -1;
+    }
 
-console.log(lettersMatch(wordsJson, "qop"));
+    let temp = words;
+    letters = letters.split('');
+
+    for(let index = 0; index < letters.length; index++){
+        if(letters[index] != "." && letters[index] != "_"){
+            console.log(`index : ${index} letters : ${letters[index]}`)
+            temp = temp.filter(a => a[index] == letters[index]);
+        }
+
+    }
+
+    return temp;
+}
 
 module.exports = {
     allWords,
