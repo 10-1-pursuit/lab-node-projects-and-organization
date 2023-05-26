@@ -96,9 +96,10 @@ function wordsWithQ(words) {
 }
 
 /**
- * Returns all the words that contain the letter `q`.
+ * Takes an argument `letter` and returns all the words with that matching letter(s).
  * @param {string[]} words - an array of strings.
- * @returns {string[]} An array of strings that all contain the letter `q`.
+ * @param {string} letter - a string.
+ * @returns {string[]} An array of strings that all contain the inputted letter(s).
  */
 
 function findWordsWithLetter(words, letter) {
