@@ -28,3 +28,21 @@ const subsetOfWords = (words, x, y) => words.slice((words.indexOf(x)),(words.ind
 //  `sortWords` logs all the words, sorted alphabetically.
 const sortWords = (words) => words.sort()
 // console.log(sortWords(words))
+
+
+// ### Begin building the wordle solver functions
+
+// `wordsWithQ` returns all the words that contain the letter q
+const wordsWithQ = (words, q) => words.filter(a => a.includes(q))
+// console.log(wordsWithQ(words, "q"))
+
+// `findWordsWithLetter` takes an argument `letter` and returns all the words with that matching letter
+const findWordsWithLetter = (words, letter) => words.filter(a => a.includes(letter))
+// console.log(findWordsWithLetter(words, "iko"))
+
+// input a letter from the terminal.
+const findWordsWithTerminalLetter = (words, letter) => words.filter(a => a.includes(letter = process.argv[2])).sort()
+// 
+console.log(findWordsWithTerminalLetter(words))
+
+
