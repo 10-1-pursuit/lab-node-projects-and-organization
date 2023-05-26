@@ -181,7 +181,6 @@ function lettersExactMatch(words = wordsJson, letters){
 
     for(let index = 0; index < letters.length; index++){
         if(letters[index] != "." && letters[index] != "_"){
-            console.log(`index : ${index} letters : ${letters[index]}`)
             temp = temp.filter(a => a[index] == letters[index]);
         }
 
@@ -194,33 +193,36 @@ function lettersExactMatch(words = wordsJson, letters){
  * main()
  * -----------------------------
  * main function to handle argv.
+ * 
+ * 
  */
 
-function main(words = wordsJson){
+function main(){
     const argc = process.argv.length;
+    const words = wordsJson;
 
     switch(argc){
         case 3:
-            lettersMatch(words, process.argv[2]);
+            console.log(lettersMatch(words, process.argv[2]));
             break;
         case 4:
             if(process.argv[2] == "exactly"){
-                lettersExactMatch(words, process.argv[3]);
+                console.log(lettersExactMatch(words, process.argv[3]));
             }
             else{
-                //TODO
                 let tempStrArr = lettersMatch(words, process.argv[2]);
-                tempStrArr = lettersExactMatch(tempStrArr, process.argv[3]);
+                let tempStrArr2 = lettersExactMatch(tempStrArr, process.argv[3]);
+                console.log(tempStrArr2);
             }
             break;
         default:
-            console.log("hi")
             console.log(allWords());
     }
 
 }
 
-main(wordsJson);
+main();
+
 
 module.exports = {
     allWords,
@@ -231,4 +233,7 @@ module.exports = {
     sortWords,
     wordsWithQ,
     findWordsWithLetter,
+    lettersMatch,
+    lettersExactMatch,
+    main,
 };
