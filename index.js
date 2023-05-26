@@ -190,6 +190,38 @@ function lettersExactMatch(words = wordsJson, letters){
     return temp;
 }
 
+/**
+ * main()
+ * -----------------------------
+ * main function to handle argv.
+ */
+
+function main(words = wordsJson){
+    const argc = process.argv.length;
+
+    switch(argc){
+        case 3:
+            lettersMatch(words, process.argv[2]);
+            break;
+        case 4:
+            if(process.argv[2] == "exactly"){
+                lettersExactMatch(words, process.argv[3]);
+            }
+            else{
+                //TODO
+                let tempStrArr = lettersMatch(words, process.argv[2]);
+                tempStrArr = lettersExactMatch(tempStrArr, process.argv[3]);
+            }
+            break;
+        default:
+            console.log("hi")
+            console.log(allWords());
+    }
+
+}
+
+main(wordsJson);
+
 module.exports = {
     allWords,
     firstTenWords,
