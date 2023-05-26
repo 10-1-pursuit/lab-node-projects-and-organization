@@ -94,3 +94,18 @@ function wordsWithQ(words) {
 	const qWords = words.filter((word) => word.includes('q'));
 	return qWords;
 }
+
+/**
+ * Returns all the words that contain the letter `q`.
+ * @param {string[]} words - an array of strings.
+ * @returns {string[]} An array of strings that all contain the letter `q`.
+ */
+
+function findWordsWithLetter(words, letter) {
+	const wordsWithLetter = words.filter((word) =>
+		word.includes(letter.toLowerCase())
+	);
+	return wordsWithLetter;
+}
+
+console.log(findWordsWithLetter(words, process.argv[2]));
