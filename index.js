@@ -1,4 +1,4 @@
-const wordsJson = require("./words.json");
+const wordsJson = require("./data/words.json");
 
 /**
  * allWords()
