@@ -216,7 +216,11 @@ function main(){
             }
             break;
         default:
-            console.log(allWords());
+            console.log(`command should be:`);
+            console.log(`node index.js [letters]`);
+            console.log(`node index.js exactly [letters]`);
+            console.log(`node index.js [letters in any position] [letters in the correct position]`);
+            console.log(`*letters can be up to 5 characters long`);
     }
 
 }
