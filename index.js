@@ -121,10 +121,9 @@ function findWordsWithLetterAtPosition(words, letter, position) {
 // Bonus -
 
 /**
- * Takes an argument `letter` and returns all the words with that matching letter(s).
+ * Takes an argument `letters` of up to 5 letters in any order and returns the words that match the criteria.
  * @param {string[]} words - an array of strings.
- * @param {string} letter - a string.
- * @param {number} position [optional] - a number that represents the index of inputted letter in all the words.
+ * @param {string} letters - a string.
  * @returns {string[]} An array of strings that all contain the inputted letter(s).
  */
 
@@ -132,13 +131,35 @@ function lettersMatch(words, letters) {
 	const wordsWithLetter = words.filter((word) => {
 		if (letters.length === 1 && word.includes(letters.toLowerCase())) {
 			return word;
-		} else if (letters.length === 2 && word.includes(letters.toLowerCase())) {
+		} else if (
+			letters.length === 2 &&
+			word.includes(letters[0].toLowerCase()) &&
+			word.includes(letters[1].toLowerCase())
+		) {
 			return word;
-		} else if (letters.length === 3 && word.includes(letters.toLowerCase())) {
+		} else if (
+			letters.length === 3 &&
+			word.includes(letters[0].toLowerCase()) &&
+			word.includes(letters[1].toLowerCase()) &&
+			word.includes(letters[2].toLowerCase())
+		) {
 			return word;
-		} else if (letters.length === 4 && word.includes(letters.toLowerCase())) {
+		} else if (
+			letters.length === 4 &&
+			word.includes(letters[0].toLowerCase()) &&
+			word.includes(letters[1].toLowerCase()) &&
+			word.includes(letters[2].toLowerCase()) &&
+			word.includes(letters[3].toLowerCase())
+		) {
 			return word;
-		} else if (letters.length === 5 && word.includes(letters.toLowerCase())) {
+		} else if (
+			letters.length === 5 &&
+			word.includes(letters[0].toLowerCase()) &&
+			word.includes(letters[1].toLowerCase()) &&
+			word.includes(letters[2].toLowerCase()) &&
+			word.includes(letters[3].toLowerCase()) &&
+			word.includes(letters[4].toLowerCase())
+		) {
 			return word;
 		}
 	});
@@ -156,4 +177,5 @@ module.exports = {
 	wordsWithQ,
 	findWordsWithLetter,
 	findWordsWithLetterAtPosition,
+	lettersMatch,
 };
