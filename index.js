@@ -104,15 +104,13 @@ function wordsWithQ(words) {
  */
 
 function findWordsWithLetter(words, letter, position) {
-	const wordsWithLetter = words.filter((word) => {
-		if (position && word[position] === letter.toLowerCase()) {
+	return words.filter((word) => {
+		if (word[position] === letter.toLowerCase()) {
 			return word;
-		}
-		if (!position && word.includes(letter.toLowerCase())) {
+		} else if (position === undefined && word.includes(letter.toLowerCase())) {
 			return word;
 		}
 	});
-	return wordsWithLetter;
 }
 
 // Bonus -
@@ -151,4 +149,5 @@ module.exports = {
 	subsetOfWords,
 	sortWords,
 	wordsWithQ,
+	findWordsWithLetter,
 };
