@@ -115,4 +115,40 @@ function findWordsWithLetter(words, letter, position) {
 	return wordsWithLetter;
 }
 
-console.log(findWordsWithLetter(words, process.argv[2], process.argv[3]));
+// Bonus -
+
+/**
+ * Takes an argument `letter` and returns all the words with that matching letter(s).
+ * @param {string[]} words - an array of strings.
+ * @param {string} letter - a string.
+ * @param {number} position [optional] - a number that represents the index of inputted letter in all the words.
+ * @returns {string[]} An array of strings that all contain the inputted letter(s).
+ */
+
+function lettersMatch(words, letters) {
+	const wordsWithLetter = words.filter((word) => {
+		if (letters.length === 1 && word.includes(letters.toLowerCase())) {
+			return word;
+		} else if (letters.length === 2 && word.includes(letters.toLowerCase())) {
+			return word;
+		} else if (letters.length === 3 && word.includes(letters.toLowerCase())) {
+			return word;
+		} else if (letters.length === 4 && word.includes(letters.toLowerCase())) {
+			return word;
+		} else if (letters.length === 5 && word.includes(letters.toLowerCase())) {
+			return word;
+		}
+	});
+	return wordsWithLetter;
+}
+
+module.exports = {
+	words,
+	allWords,
+	firstTenWords,
+	nextTenWords,
+	firstXWords,
+	subsetOfWords,
+	sortWords,
+	wordsWithQ,
+};
