@@ -71,6 +71,25 @@ function consoleNextTen(allWords) {
     }
     return nextTenWords;
 }
-console.log(consoleTenWords(allWords))
 
+// - `firstXWords` logs from 0 to x words.
 
+function firstXWords(xWords, xAmount) {
+
+    for (let i = 0; i < xAmount; i++) {
+
+    }
+    return xWords;
+}
+
+function subsetOfWords(allWords, xSubset, ySubset) {
+
+    let subset = [];
+
+    for (let i = xSubset; i < ySubset; i++) {
+        subset.push(allWords[i])
+    }
+    return subset;
+}
+
+console.log(subsetOfWords(allWords, process.argv[2], process.argv[3]))
