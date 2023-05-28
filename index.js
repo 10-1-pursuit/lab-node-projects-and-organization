@@ -34,22 +34,21 @@ const nextTenWords = (words) => {
 };
 
 // `firstXWords` logs from 0 to x words.
-
 const firstXWords = (words, num) => {
     for (let i = 0; i < num; i++) {
-
+        
     //    console.log(firstXWords)
-        return console.log(words[i])
+         console.log(words[i])
     };
 };
 
 // `subsetOfWords` logs from x to y words.
 
 const subsetOfWords = (words, lowest, highest) => {
-    for (let i = lowest; i < highest; i++) {
+    for (let i = lowest; i <= highest; i++) {
      
      //   console.log(words[i])
-        return words[i]
+        console.log(words[i])
     };
 };
 //console.log(subsetOfWords(words))
@@ -59,8 +58,8 @@ const sortWords = (words) => {
    //n console.log(sortedList)
     return words.slice().sort()
 };
-console.log(firstTenWords(words))
-
+//console.log(firstXWords(words, process.argv[2]))
+console.log(subsetOfWords(words, process.argv[2], process.argv[3]))
 
 
 

@@ -22,9 +22,9 @@ When creating this functionality, it's okay to use just a sample set of 3-10 wor
 - One that returns a list of words that has matching letters that also match the position
 */
 
-const findWordsSmarter = (sortWords, target) => {
-    wordsWithTarget = sortWords.filter((wordsArr) => wordsArr.includes(target))  // - finds the words with the matching letter
-    wordsWithOutTarget = sortWords.filter((wordsArr) => wordsArr.includes(!target)) // - - finds the words with no matching letters
+const findWordsSmarter = (list, target) => {
+    wordsWithTarget = list.filter((wordsArr) => wordsArr.includes(target))  // - finds the words with the matching letter
+    wordsWithOutTarget = list.filter((wordsArr) => wordsArr.includes(!target)) // - - finds the words with no matching letters
 
     for (let targetWords of wordsWithTarget) {
         singleWord = targetWords.split(" ")
@@ -53,4 +53,4 @@ const findWordsbyLetter = (list, letter) => {
 
 //console.log(findWordsSmarter(list, "a"))
 
-console.log(findWordsSmarter(sortWords(list), "m"))
+console.log(findWordsSmarter(sortWords(list), process.argv[2]))

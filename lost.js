@@ -65,5 +65,17 @@ const trial3 = (list, targetA , targetB ) => {
       
 } 
 
-console.log(trial3(list, process.argv[2], process.argv[3]))
+const targetWordArr = (trial3(list, process.argv[2], process.argv[3]))
 
+function targetRegexWord(targetWordArr, targetReg){
+
+   for(let wordArr of targetWordArr){
+
+        let regrex = /targetReg/
+        regrex.test(wordArr)
+   }
+
+}
+
+
+console.log(targetWordArr)
