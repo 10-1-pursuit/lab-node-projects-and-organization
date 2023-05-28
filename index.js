@@ -58,8 +58,19 @@ function consoleTenWords(allWords) {
     }
     return getTenWords;
 }
-console.log(consoleTenWords(allWords))
-
 
 // - `nextTenWords` logs the next 10 words.
+
+function consoleNextTen(allWords) {
+
+    let nextTenWords = [];
+
+    for (let i = 10; i < 20; i++) {
+        // const getTenWords = allWords.some((onlyTen) => onlyTen.length === 10)
+        nextTenWords.push(allWords[i])
+    }
+    return nextTenWords;
+}
+console.log(consoleTenWords(allWords))
+
 
