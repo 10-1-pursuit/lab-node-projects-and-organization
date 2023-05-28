@@ -2,27 +2,29 @@ const words = require("./words.json")
 
 
 
-//A function `allWords` logs all the words.
+//A function `allWords` logs all the words
 
-const allWords = ({words}) => {
+
+const allWords = (words) => {
      console.log(words)
      return words
 };
 //console.log(allWords(words))
 //`firstTenWords` logs the first ten words.
 
-const firstTenWords = ({words}) => {
+const firstTenWords = (words) => {
+    let tenWords = []
     for (let i = 0; i < 10; i++) {
-      //  console.log(words[i])
-        return words[i]
+      tenWords.push(words[i])
     };
+    return tenWords
 };
 
 //console.log(firstTenWords(words))
 
 //`nextTenWords` logs the next 10 words.
 
-const nextTenWords = ({words}) => {
+const nextTenWords = (words) => {
     for (let i = 10; i < 20; i++) {
 
     //    console.log(nextTenWords)
@@ -33,7 +35,7 @@ const nextTenWords = ({words}) => {
 
 // `firstXWords` logs from 0 to x words.
 
-const firstXWords = ({words, num}) => {
+const firstXWords = (words, num) => {
     for (let i = 0; i < num; i++) {
 
     //    console.log(firstXWords)
@@ -53,10 +55,21 @@ const subsetOfWords = (words, lowest, highest) => {
 //console.log(subsetOfWords(words))
 //`sortWords` logs all the words, sorted alphabetically.
 
-const sortWords = ({words}) => {
+const sortWords = (words) => {
    //n console.log(sortedList)
-    return sortedList = words.slice().sort()
+    return words.slice().sort()
 };
+console.log(firstTenWords(words))
+
+
+
+
+
+
+
+
+
+
 
 
 
