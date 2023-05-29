@@ -5,6 +5,7 @@ const myImportedModule = require("./words.json")
 const everyWord = require("./words.json");
 
 
+// allWords` logs all the words.
 
 function allWords() {
     return everyWord;
@@ -15,7 +16,7 @@ console.log(allWords());
 
 
 
-    
+    // `firstTenWords` logs the first ten words.
 
 
 function firstTenWords() {
@@ -27,7 +28,7 @@ console.log(firstTenWords())
 
   
 
-
+// nextTenWords` logs the next 10 words
 
 
 
@@ -38,6 +39,8 @@ function nextTenWords(words) {
 console.log(nextTenWords())
 
 
+
+// firstXWords` logs from 0 to x words.
 
 
 
@@ -51,7 +54,13 @@ firstXWords(everyWord, 8);
 
 
 
-function subsetOfWords(x, y) {
-    
-
+function subsetOfWords(everyWord,x, y) {
+   for (let i = x; i < y; i++){
+        console.log(everyWord[i]);
+          
+  }
 }
+ 
+subsetOfWords(everyWord,62,70);
+
+//  function 
