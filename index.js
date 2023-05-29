@@ -63,4 +63,21 @@ function subsetOfWords(everyWord,x, y) {
  
 subsetOfWords(everyWord,62,70);
 
-//  function 
+ 
+
+// `sortWords` logs all the words, sorted alphabetically.
+
+
+function sortWordsByAlphabetically(){
+    return everyWord.sort();
+ }
+
+ console.log(sortWordsByAlphabetically());
+
+ 
+
+ function wordsWithQ(){
+    return everyWord.filter((word) => word.includes("q"));
+ }
+
+ console.log(wordsWithQ());
