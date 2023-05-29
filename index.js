@@ -48,7 +48,7 @@ function firstXWords(words) {
  * @returns {string[]} - A subset of words (6-25)
  */
 const subsetOfWords = () => words.slice(5, 25);
-
+//remember to set variables and make this dynamic && above
 const subset = subsetOfWords();
 console.log("Subset of words:", subset);
 
