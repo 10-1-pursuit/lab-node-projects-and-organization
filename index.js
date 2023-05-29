@@ -149,10 +149,48 @@ function lettersMatch(words = wordsJson, letters){
 
     let temp = words;
     letters = letters.split('');
+    let duplicateW = false;
+    let countL = {};
 
     for(let index = 0; index < letters.length; index++){
-        if(letters[index] != "." || letters[index] != "_"){
-            temp = findWordsWithLetter(temp, letters[index]);
+        if(!countL[letters[index]]){
+            countL[letters[index]] = 0;
+        }
+        countL[letters[index]]++;
+        if(countL[letters[index]] > 1){
+            duplicateW = true;
+        }
+    
+    }
+
+    if(duplicateW == false){
+        for(let index = 0; index < letters.length; index++){
+            if(letters[index] != "." || letters[index] != "_"){
+                temp = findWordsWithLetter(temp, letters[index]);
+            }
+        }
+    }
+    else{
+        for(let char in countL){
+            if(countL[char] == 1){
+                temp = findWordsWithLetter(temp, char);
+            }
+            else{
+                /** .filter() starts here */
+                temp = temp.filter(a => {
+                    let count = 0;
+                    let b = a.split('');
+                    for(let i = 0; i < b.length; i++){
+                        if (b[i] == char){
+                            count++;
+                        }
+                    }
+                    if(count >= countL[char]){
+                        return a;
+                    }
+                });
+                /** .filter() end */
+            }
         }
     }
 
