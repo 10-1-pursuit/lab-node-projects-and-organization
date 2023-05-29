@@ -248,8 +248,8 @@ function main(){
                 console.log(lettersExactMatch(words, process.argv[3]));
             }
             else{
-                let tempStrArr = lettersMatch(words, process.argv[2]);
-                let tempStrArr2 = lettersExactMatch(tempStrArr, process.argv[3]);
+                let tempStrArr = lettersMatch(words, process.argv[3]);
+                let tempStrArr2 = lettersExactMatch(tempStrArr, process.argv[2]);
                 console.log(tempStrArr2);
             }
             break;
