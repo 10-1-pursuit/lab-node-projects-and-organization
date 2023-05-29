@@ -117,6 +117,7 @@ function letttersExactMatch(letters) {
     })
 }
 
+
 module.exports = {
   allWords,
   firstTenWords,
