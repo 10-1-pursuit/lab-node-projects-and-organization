@@ -41,14 +41,17 @@ console.log(nextTenWords())
 
 
 
-function firstXWords(x) {
-  return everyWord.slice(0, x);
+function firstXWords(everyWord,x) {
+  for (let i = 0; i < x; i++){
+    console.log(everyWord[i])
+  }
 }
 
-firstXWords();
+firstXWords(everyWord, 8);
 
 
 
 function subsetOfWords(x, y) {
+    
 
 }
