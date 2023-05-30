@@ -5,6 +5,8 @@ const words = data;
 // console.log(`"${data[1]}"`)
 
 
+ // Simple functions
+
 // allWords logs all the words.
 const allWords = () => {
     console.log(words)
@@ -33,11 +35,39 @@ const firstXWords = (x) => {
  const subsetOfWords = (x, y) => {
     console.log(words.slice(x, y))
  }
-//  subsetOfWords(2, 19);
+//  subsetOfWords(4,9);
 
 // sortWords logs all the words, sorted alphabetically.
 const sortWords = () => {
     console.log(words.slice().sort())
 }
 // sortWords();
+
+// end of simple functions
+
+// wordle solver functions
+
+// wordsWithQ returns all the words that contain the letter q
+
+const wordsWithQ = () => {
+    console.log(words.slice().filter(word => word.includes("q")))
+}
+
+// wordsWithQ();
+
+// findWordsWithLetter takes an argument letter and returns all the words with that matching letter
+
+const findWordsWithLetter = () => {
+    const letter = process.argv[2];
+    if (!letter) {
+        console.log('please provide a letter as an argument');
+        return;
+    }
+const lowercaseLetter = letter.toLowerCase(); 
+console.log(words.slice().filter(word => word.toLowerCase().includes(lowercaseLetter)));
+//  console.log(words.slice().filter(word => word.includes(letter)))
+}
+findWordsWithLetter();
+
+// end of wordle solver functions
 
