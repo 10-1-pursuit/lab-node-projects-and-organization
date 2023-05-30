@@ -16,17 +16,17 @@ console.log(allWords());
 
 
 
-    // `firstTenWords` logs the first ten words.
+// `firstTenWords` logs the first ten words.
 
 
 function firstTenWords() {
-  return everyWord.slice(0, 10);
-  
-}  
+    return everyWord.slice(0, 10);
+
+}
 
 console.log(firstTenWords())
 
-  
+
 
 // nextTenWords` logs the next 10 words
 
@@ -44,40 +44,48 @@ console.log(nextTenWords())
 
 
 
-function firstXWords(everyWord,x) {
-  for (let i = 0; i < x; i++){
-    console.log(everyWord[i])
-  }
+function firstXWords(everyWord, x) {
+    for (let i = 0; i < x; i++) {
+        console.log(everyWord[i])
+    }
 }
 
 firstXWords(everyWord, 8);
 
 
 
-function subsetOfWords(everyWord,x, y) {
-   for (let i = x; i < y; i++){
+function subsetOfWords(everyWord, x, y) {
+    for (let i = x; i < y; i++) {
         console.log(everyWord[i]);
-          
-  }
-}
- 
-subsetOfWords(everyWord,62,70);
 
- 
+    }
+}
+
+subsetOfWords(everyWord, 62, 70);
+
+
 
 // `sortWords` logs all the words, sorted alphabetically.
 
 
-function sortWordsByAlphabetically(){
+function sortWordsByAlphabetically() {
     return everyWord.sort();
- }
+}
 
- console.log(sortWordsByAlphabetically());
+console.log(sortWordsByAlphabetically());
 
- 
 
- function wordsWithQ(){
+
+function wordsWithQ() {
     return everyWord.filter((word) => word.includes("q"));
- }
+}
 
- console.log(wordsWithQ());
+console.log(wordsWithQ());
+
+
+
+function findWordsWithLetter() {
+    return everyWord.filter(word => word.includes(x));
+}
+
+findWordsWithLetter();
