@@ -65,13 +65,11 @@ firstXWords(data,2);
 * @returns {string[]}  logs from x to y words.*/
 
 
-function subsetOfWords(data, x, y){
-const subset = data.slice(x, y, +1);
-subset.forEach(() => {
-    console.log(x, y);
-});
-subsetOfWords(data, x, y)
-}
+function subsetOfWords(data, x, y){}
+
+  
+
+
 
 
 
@@ -81,8 +79,11 @@ subsetOfWords(data, x, y)
 * @returns {string[]}  logs all the words, sorted alphabetically.*/
 
 
- function sortWords(data){  }
-
+function sortWords(data){  
+const subsetList = data.sort()
+    console.log(subsetList);
+}
+sortWords(data);
 
 
 
