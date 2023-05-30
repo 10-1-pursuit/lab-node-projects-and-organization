@@ -97,7 +97,7 @@ function findWordsWithLetter (words, letter){
 }
 findWordsWithLetter(importedWordsJsonFile, "n");
 
-//Function that allows us to find a word by inputting a letter 
+//Function that allows us to find a word by inputting a letter to node index.js
 function findWordsWithLetterUsingNode(words){
     const letterToFind = process.argv[2]
     const wordsWithLetterLookedFor = []
