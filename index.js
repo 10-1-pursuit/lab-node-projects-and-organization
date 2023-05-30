@@ -65,9 +65,13 @@ firstXWords(data,2);
 * @returns {string[]}  logs from x to y words.*/
 
 
-function subsetOfWords(data, x, y){}
-
-  
+function subsetOfWords(data, x, y){
+    let subSetList = [];
+for (let i = x; i < y; i++) {
+    subSetList.push(allWords[i])
+}
+return subSetList
+}
 
 
 
