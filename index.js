@@ -29,11 +29,47 @@ function lastTenWords(word) {
      return lastTen
 }
 
-function firstXWords (xWord,xAmount) {
+function firstXWords (words,y) {
 let word = []
-for (let i = 0; i < xAmount; i++) {
- xWord.push(word[i]);
-}
+for (let i = 0; i < y; i++) {
+ word.push(words[i]);
+   }
  return word
 }
-console.log(firstXWords(words))
+ 
+function subsetOfWords(words, x, y) {
+    let subset = [];
+    for (let i = x; i < y; i++) {
+        subset.push(words[i]);
+    }
+    return subset;
+}
+//console.log(subsetOfWords(words,7,18))
+
+ function sortWords(words){
+    const sortedList = words.sort()
+        console.log(sortedList);
+ }
+ sortWords(words)
+
+ function wordsWithQ(words){
+    const filteredWordsWithQ = words.filter(word => words.include('q'));
+    return filteredWordsWithQ;
+ }
+ wordsWithQ(words)
+
+ function wordsWithLetter(words,letter) {
+    return words.filter(word => word.includes(letter));
+ }
+
+ function lettersMatch( words,letters) {
+    if(letters.length > 5){
+        return "letters must contain up to 5 letters";
+    }
+    let char = words;
+    letters = letters.split(");
+
+    for (let i = 0; i < letters.length; i++) {
+        if (let
+    }
+ }
