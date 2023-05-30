@@ -4,7 +4,9 @@ const importedWordsJsonFile = require("./words.json");
 //console.log(importedWordsJsonFile);
 
 
-/*Write the following functions:
+/*
+Start Simple
+Write the following functions:
 1) - `allWords` logs all the words.
 2) - `firstTenWords` logs the first ten words.
 3) - `nextTenWords` logs the next 10 words.
@@ -53,3 +55,57 @@ function sortWords(words){
     return wordsSorted;
 }
 sortWords(importedWordsJsonFile);
+
+
+/*
+Begin building the wordle solver functions
+**Note:** When creating this functionality, it's okay to use just a sample set of 3-10 words. 
+This step can make troubleshooting a bit easier. Be sure to test for the following scenarios:
+
+- find a word with the matching letter
+- find a word with more than one of the matching letter
+- find a word with no matching letters
+
+7) - `wordsWithQ` returns all the words that contain the letter q
+8) - `findWordsWithLetter` takes an argument `letter` and returns all the words with that matching letter
+*/
+
+//******FULL DISCLOSURE - I was able to figure the below functions out after a review session with Gary*****
+
+// 7) Function that returns all the words with the letter Q - (`wordsWithQ` returns all the words that contain the letter q)
+function wordsWithQ (words){
+    const wordsThatHaveLetterQ = [];
+    for(let i = 0; i < words.length; i++){
+        if(words[i].includes("q")){
+          wordsThatHaveLetterQ.push(words[i]);
+        }
+    }
+    return wordsThatHaveLetterQ;
+}
+wordsWithQ(importedWordsJsonFile);
+
+// 8) Function that takes an argument "letter" and returns all the words with that matching letter 
+//(`findWordsWithLetter` takes an argument `letter` and returns all the words with that matching letter)
+function findWordsWithLetter (words, letter){
+    const wordsWithProvidedLetter = [];
+    for(let i = 0; i < words.length; i++){
+        if(words[i].includes(letter)){
+          wordsWithProvidedLetter.push(words[i]);
+        }
+    }
+    return wordsWithProvidedLetter;
+}
+findWordsWithLetter(importedWordsJsonFile, "n");
+
+//Function that allows us to find a word by inputting a letter 
+function findWordsWithLetterUsingNode(words){
+    const letterToFind = process.argv[2]
+    const wordsWithLetterLookedFor = []
+    for(let i = 0; i < words.length; i++){
+        if(words[i].includes(letterToFind)){
+            wordsWithLetterLookedFor.push(words[i]);
+        }
+    }
+    return wordsWithLetterLookedFor;
+}
+findWordsWithLetterUsingNode(importedWordsJsonFile);
