@@ -70,21 +70,22 @@ function sortWords(list) {
   const sortedList = list.sort((a, b) => {
     return a.localeCompare(b);
   });
-  sortedList.forEach(word => console.log(word))
-};
+  sortedList.forEach((word) => console.log(word));
+}
 
- //allWords(wordleList);
- //firstTenWords(wordleList);
- // nextTenWords(wordleList);
+//allWords(wordleList);
+//firstTenWords(wordleList);
+// nextTenWords(wordleList);
 //  firstXWords(wordleList);
 //  subsetOfWords(wordleList);
 //  sortWords(wordleList);
 
- (module.exports = {
-     allWords,
-     firstTenWords,
-     nextTenWords,
-     firstXWords,
-     subsetOfWords,
-     sortWords,
-   });
+module.exports = {
+  wordleList,
+  allWords,
+  firstTenWords,
+  nextTenWords,
+  firstXWords,
+  subsetOfWords,
+  sortWords,
+};

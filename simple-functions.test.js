@@ -1,4 +1,5 @@
 const {
+  wordleList,
   allWords,
   firstTenWords,
   nextTenWords,
@@ -7,10 +8,10 @@ const {
   sortWords,
 } = require("./simple-functions");
 
-const wordleList = require("./words")
+const wordleList = require("./words");
 
 test("logs all words", () => {
-    expect(allWords()).toBe(console.log(wordleList));
+  expect(allWords()).toBe(console.log(wordleList));
 });
 
 test("logs the first 10 words", () => {
