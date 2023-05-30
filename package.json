@@ -1,0 +1,15 @@
+{
+  "name": "projects-and-organization-lab",
+  "version": "1.0.0",
+  "description": "This lab requires you to create a new node project, import the data from `words.json`, and create some functionality to use the data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  }
+}
