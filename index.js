@@ -5,7 +5,7 @@ const words = require("./words.json")
 //A function `allWords` logs all the words
 
 
-const allWords = (words) => {
+const allWords = (words) => {            // I origonally wrote these a tradional constructor function. But i wanted to export them so i destructred them.
      console.log(words)
      return words
 };
@@ -34,22 +34,26 @@ const nextTenWords = (words) => {
 };
 
 // `firstXWords` logs from 0 to x words.
-const firstXWords = (words, num) => {
+const firstXWords = (words, num) => {          // a destructerd function. Now, As a variable, I can export for later us.
+    const subsetOfstrings = []
     for (let i = 0; i < num; i++) {
+         
+         subsetOfstrings.push(words[i]) 
         
-    //    console.log(firstXWords)
-         console.log(words[i])
-    };
+        };
+        return subsetOfstrings
 };
 
 // `subsetOfWords` logs from x to y words.
 
 const subsetOfWords = (words, lowest, highest) => {
+   const subset = []
     for (let i = lowest; i <= highest; i++) {
      
-     //   console.log(words[i])
-        console.log(words[i])
+       // console.log(words[i])
+        subset.push(words[i])
     };
+    return subset
 };
 //console.log(subsetOfWords(words))
 //`sortWords` logs all the words, sorted alphabetically.
@@ -59,7 +63,10 @@ const sortWords = (words) => {
     return words.slice().sort()
 };
 //console.log(firstXWords(words, process.argv[2]))
-console.log(subsetOfWords(words, process.argv[2], process.argv[3]))
+
+//console.log(firstXWords(words, process.argv[2]))  // the value entered must be a number.
+//console.log(sortWords(words))
+//console.log(words)
 
 
 
@@ -72,7 +79,7 @@ console.log(subsetOfWords(words, process.argv[2], process.argv[3]))
 
 
 
-module.exports = { sortWords, firstTenWords, allWords };
+module.exports = { sortWords, firstTenWords, allWords, firstXWords };    // module is a keyword and exports a method called on objects (kinda)
 
 
 
