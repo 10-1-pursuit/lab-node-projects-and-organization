@@ -75,8 +75,6 @@ return subSetList
 
 
 
-
-
 /**
 * Returns an array from logs all the words, sorted alphabetically.
 * @param {String} data - A string.
@@ -88,9 +86,6 @@ const subsetList = data.sort()
     console.log(subsetList);
 }
 sortWords(data);
-
-
-
 
 
 
