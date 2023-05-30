@@ -45,10 +45,10 @@ function consoleNextTen(allWords) {
 
 function firstXWords(xWords, xAmountOf) {
 
-    let arrayOfSplitWords = xWords.split(" ")
-    let xAmountOfWords = arrayOfSplitWords.slice(0, xAmountOf)
-    let joinWordsTogether = xAmountOfWords.join(" ")
-
+    let xNumOfWords = [];
+    for (let i = 0; i < xAmountOf; i++) {
+        xNumOfWords.push(xWords[i])
+    }
     return xNumOfWords;
 }
 
