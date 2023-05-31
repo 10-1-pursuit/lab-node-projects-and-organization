@@ -110,7 +110,7 @@ function findWordsWithLetter(data,allWords){
         return data.filter(word => word.includes(allWords));
     }
     
- console.log(findWordsWithLetter(data, "heat"));
+         console.log(findWordsWithLetter(data, "tap"));
 
 
 module.exports = {
