@@ -94,7 +94,6 @@ sortWords(data);
 * @param {String} data - A string.
 * @returns {string[]} returns all the words that contain the letter q*/
  
-
 function wordsWithQ(data){
  return data.filter(word => word.includes('q'));
 }
@@ -107,8 +106,11 @@ console.log(wordsWithQ(data));
 * @returns {string[]} returns all the words with that matching letter */
 
 
-
-function findWordsWithLetter(data){}
+function findWordsWithLetter(data,allWords){
+        return data.filter(word => word.includes(allWords));
+    }
+    
+ console.log(findWordsWithLetter(data, "heat"));
 
 
 module.exports = {
